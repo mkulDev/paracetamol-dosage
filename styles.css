@@ -2,16 +2,6 @@
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-h1 {
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 60px;
-  margin-top: 60px;
-}
-
-p {
-  font-size: 20px;
-}
 
 .conteiner {
   display: flex;
@@ -42,10 +32,12 @@ p {
   width: 60%;
   min-width: 340px;
 }
+main {
+  margin-bottom: 40px;
+}
 
 .bottom {
-  width: 80%;
-  margin-bottom: 40px;
+  width: 90%;
 }
 
 .progres-bar {
@@ -102,13 +94,15 @@ p {
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.4s;
-  margin-bottom: 15px;
+
+  margin: 15px 0px;
   border-radius: 5px;
 }
 .age-range,
 .month-range,
 .weight-range {
   opacity: 1;
+  transition: 0.3s ease-in-out;
 }
 .weight-range::-webkit-slider-thumb,
 .month-range::-webkit-slider-thumb,
@@ -120,6 +114,12 @@ p {
   background: rgb(19, 189, 175);
   cursor: pointer;
   border-radius: 50%;
+}
+
+.age-range::-webkit-slider-thumb:hover,
+.month-range::-webkit-slider-thumb:hover,
+.weight-range::-webkit-slider-thumb:hover {
+  opacity: 0.6;
 }
 
 .button {
@@ -136,6 +136,22 @@ p {
 .button:hover {
   opacity: 0.6;
 }
+
 #monthly {
   display: none;
+}
+
+h1 {
+  width: clamp(300px, 80vw, 80vw);
+  margin: 60px auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+#Error {
+  color: rgb(197, 11, 2);
+}
+
+p {
+  font-size: 20px;
 }
