@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Paracetamol for childeren</title>
+  </head>
+  <body>
+    <main>
+      <h1>Dawkowanie Paracetamolu dla dzieci</h1>
+
+      <div class="conteiner">
+        <div class="left">
+          <label for="age-range">Wiek Dziecka: <span id="wiek">0</span></label>
+          <input type="range" name="age-range" min="0" max="12" step="1" class="age-range" id="slider-age" />
+
+          <div id="monthly">
+            <label for="age-range">Miesiąc życia: <span id="month">0</span></label>
+            <input type="range" name="age-range" min="0" max="12" step="1" class="month-range" id="slider-month" />
+          </div>
+
+          <label for="weight-range">Waga Dziecka: <span id="waga">0</span></label>
+          <input type="range" name="weight-range" min="0" max="45" step="1" class="weight-range" id="slider-weight" />
+          <input type="button" value="Oblicz" class="button" id="button" />
+
+          <p class="description">
+            <strong>Sposób i droga podania:</strong> Podanie doustne. Należy zapoznać się z treścią ulotki przed przyjęciem leku. Przed użyciem energicznie wstrząsnąć do w celu uzyskania jednorodnej zawiesiny. Jeśli lekarz nie zaleci inaczej,
+            przyjęta jednorazowa dawka paracetamolu wynosi od 10 do 15mg na kilogram masy ciała. W razie konieczności dawkę można powtarzać nie częściej niż co 4-6 godzin, do 4 razy na dobę. Maksymalna dawka wynosi 60mg/kg/dobę (1ml = 24mg)
+          </p>
+        </div>
+        <div class="right">
+          <img src="./resourcess/images/Hasco.jpg" class="hasco" />
+        </div>
+        <div class="bottom">
+          <div class="one-time-dosee">
+            <h2>Dawka jednorazowa</h2>
+            <div class="progres-bar">
+              <div class="progres-bar2" id="progres-bar2">
+                <p id="progres-text">0 ml</p>
+              </div>
+            </div>
+          </div>
+          <div class="daily-dose">
+            <h2>Dawka dzienna maksymalna</h2>
+            <div class="progres-bar">
+              <div class="progres-bar3" id="progres-bar3">
+                <p id="progres-text2">0 ml</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 id="Error"></h2>
+      </div>
+    </main>
+    <script src="./main.js" type="text/javascript"></script>
+  </body>
+</html>
