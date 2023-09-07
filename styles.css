@@ -3,12 +3,24 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  margin-bottom: 30px;
+}
 .conteiner {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 80vw;
   flex-wrap: wrap;
   margin: 0 auto;
 }
@@ -32,13 +44,21 @@
   width: 60%;
   min-width: 340px;
 }
-main {
-  margin-bottom: 40px;
-}
 
 .bottom {
   width: 90%;
 }
+
+/* Header */
+
+h1 {
+  width: clamp(300px, 80vw, 80vw);
+  margin: 30px auto;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Progress bar */
 
 .progres-bar {
   height: 20px;
@@ -73,6 +93,7 @@ main {
   font-size: 14px;
   color: rgb(238, 238, 238);
 }
+
 #progres-text2 {
   font-size: 14px;
   color: rgb(238, 238, 238);
@@ -82,6 +103,8 @@ main {
 .daily-dose {
   text-align: center;
 }
+
+/* Input bar */
 
 .age-range,
 .month-range,
@@ -98,12 +121,14 @@ main {
   margin: 15px 0px;
   border-radius: 5px;
 }
+
 .age-range,
 .month-range,
 .weight-range {
   opacity: 1;
   transition: 0.3s ease-in-out;
 }
+
 .weight-range::-webkit-slider-thumb,
 .month-range::-webkit-slider-thumb,
 .age-range::-webkit-slider-thumb {
@@ -139,13 +164,6 @@ main {
 
 #monthly {
   display: none;
-}
-
-h1 {
-  width: clamp(300px, 80vw, 80vw);
-  margin: 60px auto;
-  font-size: 30px;
-  text-align: center;
 }
 
 #Error {
